@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>youtube</title>
+         <style>
+            button{
+                background-color:black;
+                color: white;
+                border-radius: 20px;
+                padding: 10px 15px;
+                border: none;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .is-subscribed{
+                background-color: white;
+                color: black;
+                font-weight: bold;
+            }
+         </style>
+    </head>
+    <body>
+        <p>youtube subscribe button</p>
+        <button onclick="
+        subscribe();
+        " class="subscribe">
+           subscribe
+    </button>
+
+    </body>
+    <script>
+        function subscribe(){
+            const element=document.querySelector('.subscribe');
+            if(element.innerHTML==='subscribe'){
+                element.innerHTML='subscribed';
+                element.classList.add('is-subscribed');
+            
+            
+            }else{
+                element.innerHTML='subscribe';
+            }
+        }
+
+    </script>
+</html>

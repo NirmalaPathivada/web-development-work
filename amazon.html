@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>amazon</title>
+    </head>
+    <body>
+        <p>amazon shipping calculator</p>
+        <p>Orders under $40=+$10</p>
+        <p>orders above $40=free shipping</p>
+       
+            <input  placeholder="cost of order" class="costof"  >
+            <button  onclick="calculate()">calculate</button>
+        
+        <p class="value1"></p>
+  <script>
+    function calculate(){
+         const element=document.querySelector('.costof');
+         let v=Number(element.value);
+         if(v>40){
+              document.querySelector('.value1').innerHTML=`${v}`;
+         }else{
+           v= v+10;
+            document.querySelector('.value1').innerHTML=`${v}`;
+         }
+    }
+
+  </script>
+    </body>
+</html>

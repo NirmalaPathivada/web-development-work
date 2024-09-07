@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>todolist</title>
+    </head>
+    <body>
+        <p>to do list practice 1</p>
+        <input class="nameact" placeholder="todoname">
+        <input type="datetime-local" class="datesel" >
+        <button onclick="
+        addtolist()
+        ">Add</button>
+        <div class="display"></div>
+        <script>
+            let mylist=[]; let mydate=[]
+           function display(){
+            let todolist='';
+            for(let i=0;i<mylist.length;i++){
+                let html=`<p>${mylist[i]}        ${mydate[i]} <button onclick="
+                    mylist.splice(${i},1);
+                    display();
+                    ">delete</button></p>`;
+                todolist+=html;
+            }
+            document.querySelector('.display').innerHTML=`${todolist}`;
+           }
+        
+           function addtolist(){
+           let element= document.querySelector('.nameact');
+           mylist.push(element.value);
+           let element2=document.querySelector('.datesel');
+           mydate.push(element2.value);
+           element.value='';
+           element2.value='';
+           display();
+        }
+      
+           
+        </script>
+
+    </body>
+</html>
